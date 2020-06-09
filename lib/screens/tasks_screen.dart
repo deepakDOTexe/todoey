@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:todoeyflutter/widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -57,35 +58,6 @@ class TasksScreen extends StatelessWidget {
   }
 }
 
-class TasksList extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        TaskTile(),
-        TaskTile(),
-        TaskTile(),
-      ],
-    );
-  }
-}
 
-class TaskTile extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title:Text(
-        'Buy Milk',
-        style: TextStyle(
-            color: Colors.black54,
-            fontSize: 20.0
-        ),
-      ),
-      trailing: Checkbox(
-        value: false,
-      ),
-    );
-  }
-}
